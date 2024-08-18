@@ -1,0 +1,50 @@
+@keyframes moveFromTop {
+    0% { transform: translateY(-100vh) scale(0.5); opacity: 0; }
+    50% { transform: translateY(0) scale(1.2); opacity: 0.5; }
+    100% { transform: translateY(0) scale(1); opacity: 1; }
+  }
+  
+  @keyframes moveFromBottom {
+    0% { transform: translateY(100vh) scale(0.5); opacity: 0; }
+    50% { transform: translateY(0) scale(1.2); opacity: 0.5; }
+    100% { transform: translateY(0) scale(1); opacity: 1; }
+  }
+  
+  @keyframes moveFromLeft {
+    0% { transform: translateX(-100vw) scale(0.5); opacity: 0; }
+    50% { transform: translateX(0) scale(1.2); opacity: 0.5; }
+    100% { transform: translateX(0) scale(1); opacity: 1; }
+  }
+  
+  @keyframes moveFromRight {
+    0% { transform: translateX(100vw) scale(0.5); opacity: 0; }
+    50% { transform: translateX(0) scale(1.2); opacity: 0.5; }
+    100% { transform: translateX(0) scale(1); opacity: 1; }
+  }
+  
+  /* Define the styles for the text container */
+  h1 {
+    position: absolute;
+    left: 15%;
+    top: 10%;
+    font-size: 6rem; /* Increase font size for bigger text */
+    font-weight: bold; /* Ensure text is bold */
+    text-align: center;
+    text-shadow: 4px 4px 10px rgba(0,0,0,0.5), 0 0 25px rgba(255,255,255,0.8);
+  }
+  
+  /* Apply different animations based on class names */
+  .letter {
+    display: inline-block;
+    font-size: inherit; 
+  }
+  
+  .animate-0 { animation: moveFromTop 1s forwards; }
+  .animate-1 { animation: moveFromBottom 1s forwards; }
+  .animate-2 { animation: moveFromLeft 1s forwards; }
+  .animate-3 { animation: moveFromRight 1s forwards; }
+  /* Add more animations if needed */
+  
+  .text-left {
+    transform: translateX(-20px); /* Adjust the value as needed */
+  }

@@ -1,0 +1,164 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: #000;
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+}
+
+.bg-saturn {
+    background-image: url('/Captura.PNG'); /* Use your Saturn 3D image path */
+}
+.bg-ruddi{
+  background-image: url('ruddi.png');
+}
+
+@keyframes spinSaturn {
+  0% {
+    transform: rotate(0deg) ;
+  }
+  100% {
+    transform: rotate(360deg) ;
+  }
+}
+.animate-spin-saturn {
+  width: 50%;
+  height: 50%;
+  top: 20%;
+  left: 45%;
+  animation: spinSaturn 10s linear infinite;
+}
+
+.navbar-transparent {
+  background-color: rgba(0, 0, 0, 0); /* Fully transparent */
+}
+
+.stars {
+  background: url('/stars.jpeg') repeat;
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
+}
+
+@keyframes twinkle {
+  0%, 100% {
+    transform: translateX(0) translateY(0);
+  }
+  50% {
+    transform: translateX(-10px) translateY(-10px) scale(1.1);
+  }
+}
+
+.animate-twinkle {
+  animation: twinkle 4s ease-in-out infinite alternate;
+}
+
+/* Word Animation */
+@keyframes wordFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px) rotateY(-90deg) scale(0.5);
+    color: #ff6f61;
+  }
+  50% {
+    transform: rotateY(10deg) scale(1.2);
+    color: #f7d794;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) rotateY(0deg) scale(1);
+    color: #ffffff; 
+  }
+}
+
+.animate-word-fade-in {
+  animation: wordFadeIn 1.5s ease-out forwards;
+}
+
+.delay-0 {
+  animation-delay: 0.5s;
+}
+
+.delay-1 {
+  animation-delay: 1.2s;
+}
+
+.delay-2 {
+  animation-delay: 1.9s;
+}
+
+.delay-3 {
+  animation-delay: 2.6s;
+}
+
+
+/* Define the keyframes for each direction */
+@keyframes fromTop {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fromBottom {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fromRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Assign classes for each direction */
+.from-top {
+  animation: fromTop 0.6s ease forwards;
+}
+
+.from-bottom {
+  animation: fromBottom 0.6s ease forwards;
+}
+
+.from-left {
+  animation: fromLeft 0.6s ease forwards;
+}
+
+.from-right {
+  animation: fromRight 0.6s ease forwards;
+}
+
+.hidden {
+  opacity: 0;
+}
