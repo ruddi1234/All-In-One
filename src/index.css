@@ -6,7 +6,6 @@ body, html {
     margin: 0;
     padding: 0;
     height: 100%;
-    background-color: #000;
     font-family: 'Arial', sans-serif;
     overflow: hidden;
 }
@@ -31,11 +30,7 @@ body, html {
   height: 50%;
   top: 20%;
   left: 45%;
-  animation: spinSaturn 10s linear infinite;
-}
-
-.navbar-transparent {
-  background-color: rgba(0, 0, 0, 0); /* Fully transparent */
+  animation: spinSaturn 20s ease-out infinite;
 }
 
 .stars {
@@ -159,6 +154,3 @@ body, html {
   animation: fromRight 0.6s ease forwards;
 }
 
-.hidden {
-  opacity: 0;
-}
